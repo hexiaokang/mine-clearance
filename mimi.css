@@ -1,0 +1,71 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+span{
+	margin:10px 0 0 330px;
+	font-size:20px;
+}
+#interface{
+	width:710px;
+	height:710px;
+	background:#ddd001;
+	margin:0 auto;
+	position:relative;
+}
+.tangyan,.yangmi,img{
+	width:60px;
+	height:60px;	
+}
+.tangyan{
+	float:left;
+	margin:10px 0 0 10px;
+	background:blue;
+}
+.yangmi{
+	position:absolute;
+}
+/*表层格定位*/
+#y00,#y01,#y02,#y03,#y04,#y05,#y06,#y07,#y08,#y09{top:10px;}
+#y10,#y11,#y12,#y13,#y14,#y15,#y16,#y17,#y18,#y19{top:80px;}
+#y20,#y21,#y22,#y23,#y24,#y25,#y26,#y27,#y28,#y29{top:150px;}
+#y30,#y31,#y32,#y33,#y34,#y35,#y36,#y37,#y38,#y39{top:220px;}
+#y40,#y41,#y42,#y43,#y44,#y45,#y46,#y47,#y48,#y49{top:290px;}
+#y50,#y51,#y52,#y53,#y54,#y55,#y56,#y57,#y58,#y59{top:360px;}
+#y60,#y61,#y62,#y63,#y64,#y65,#y66,#y67,#y68,#y69{top:430px;}
+#y70,#y71,#y72,#y73,#y74,#y75,#y76,#y77,#y78,#y79{top:500px;}
+#y80,#y81,#y82,#y83,#y84,#y85,#y86,#y87,#y88,#y89{top:570px;}
+#y90,#y91,#y92,#y93,#y94,#y95,#y96,#y97,#y98,#y99{top:640px;}
+/*底层格定位*/
+#y00,#y10,#y20,#y30,#y40,#y50,#y60,#y70,#y80,#y90{left:10px;}
+#y01,#y11,#y21,#y31,#y41,#y51,#y61,#y71,#y81,#y91{left:80px;}
+#y02,#y12,#y22,#y32,#y42,#y52,#y62,#y72,#y82,#y92{left:150px;}
+#y03,#y13,#y23,#y33,#y43,#y53,#y63,#y73,#y83,#y93{left:220px;}
+#y04,#y14,#y24,#y34,#y44,#y54,#y64,#y74,#y84,#y94{left:290px;}
+#y05,#y15,#y25,#y35,#y45,#y55,#y65,#y75,#y85,#y95{left:360px;}
+#y06,#y16,#y26,#y36,#y46,#y56,#y66,#y76,#y86,#y96{left:430px;}
+#y07,#y17,#y27,#y37,#y47,#y57,#y67,#y77,#y87,#y97{left:500px;}
+#y08,#y18,#y28,#y38,#y48,#y58,#y68,#y78,#y88,#y98{left:570px;}
+#y09,#y19,#y29,#y39,#y49,#y59,#y69,#y79,#y89,#y99{left:640px;}
+#gameover{
+	width:710px;
+	height:710px;
+	position:absolute;
+	top:0;
+	left:0;
+	background:gray;
+	display:none;
+}
+h2{
+	font-size:60px;
+	margin:150px 0 0 130px;
+}
+a{
+	border:1px solid yellow;
+	width:180px;
+	height:100px;
+	margin:40px 0 0 280px;
+	background:yellow;
+	font-size:30px;
+	text-decoration:none;
+}

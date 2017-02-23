@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script src="jquery-1.11.3.js"></script>
+  <script src="mimi.js"></script>
+  <link href="mimi.css" rel="stylesheet"/>
+  <title>幂幂扫雷</title>
+ </head>
+ <body>
+ <span>TIME:</span><time></time>
+  <div id="interface">
+
+  <!--底层格:10*10-->
+	<div id="t00" class="tangyan"></div> <!--1-->
+	<div id="t01" class="tangyan"></div>
+	<div id="t02" class="tangyan"></div>
+	<div id="t03" class="tangyan"></div>
+	<div id="t04" class="tangyan"></div>
+	<div id="t05" class="tangyan"></div>
+	<div id="t06" class="tangyan"></div>
+	<div id="t07" class="tangyan"></div>
+	<div id="t08" class="tangyan"></div>
+	<div id="t09" class="tangyan"></div>
+
+	<div id="t10" class="tangyan"></div><!--2-->
+	<div id="t11" class="tangyan"></div>
+	<div id="t12" class="tangyan"></div>
+	<div id="t13" class="tangyan"></div>
+	<div id="t14" class="tangyan"></div>
+	<div id="t15" class="tangyan"></div>
+	<div id="t16" class="tangyan"></div>
+	<div id="t17" class="tangyan"></div>
+	<div id="t18" class="tangyan"></div>
+	<div id="t19" class="tangyan"></div>
+
+	<div id="t20" class="tangyan"></div><!--3-->
+	<div id="t21" class="tangyan"></div>
+	<div id="t22" class="tangyan"></div>
+	<div id="t23" class="tangyan"></div>
+	<div id="t24" class="tangyan"></div>
+	<div id="t25" class="tangyan"></div>
+	<div id="t26" class="tangyan"></div>
+	<div id="t27" class="tangyan"></div>
+	<div id="t28" class="tangyan"></div>
+	<div id="t29" class="tangyan"></div>
+
+	<div id="t30" class="tangyan"></div><!--4-->
+	<div id="t31" class="tangyan"></div>
+	<div id="t32" class="tangyan"></div>
+	<div id="t33" class="tangyan"></div>
+	<div id="t34" class="tangyan"></div>
+	<div id="t35" class="tangyan"></div>
+	<div id="t36" class="tangyan"></div>
+	<div id="t37" class="tangyan"></div>
+	<div id="t38" class="tangyan"></div>
+	<div id="t39" class="tangyan"></div>
+
+	<div id="t40" class="tangyan"></div><!--5-->
+	<div id="t41" class="tangyan"></div>
+	<div id="t42" class="tangyan"></div>
+	<div id="t43" class="tangyan"></div>
+	<div id="t44" class="tangyan"></div>
+	<div id="t45" class="tangyan"></div>
+	<div id="t46" class="tangyan"></div>
+	<div id="t47" class="tangyan"></div>
+	<div id="t48" class="tangyan"></div>
+	<div id="t49" class="tangyan"></div>
+
+	<div id="t50" class="tangyan"></div><!--6-->
+	<div id="t51" class="tangyan"></div>
+	<div id="t52" class="tangyan"></div>
+	<div id="t53" class="tangyan"></div>
+	<div id="t54" class="tangyan"></div>
+	<div id="t55" class="tangyan"></div>
+	<div id="t56" class="tangyan"></div>
+	<div id="t57" class="tangyan"></div>
+	<div id="t58" class="tangyan"></div>
+	<div id="t59" class="tangyan"></div>
+
+	<div id="t60" class="tangyan"></div><!--7-->
+	<div id="t61" class="tangyan"></div>
+	<div id="t62" class="tangyan"></div>
+	<div id="t63" class="tangyan"></div>
+	<div id="t64" class="tangyan"></div>
+	<div id="t65" class="tangyan"></div>
+	<div id="t66" class="tangyan"></div>
+	<div id="t67" class="tangyan"></div>
+	<div id="t68" class="tangyan"></div>
+	<div id="t69" class="tangyan"></div>
+
+	<div id="t70" class="tangyan"></div><!--8-->
+	<div id="t71" class="tangyan"></div>
+	<div id="t72" class="tangyan"></div>
+	<div id="t73" class="tangyan"></div>
+	<div id="t74" class="tangyan"></div>
+	<div id="t75" class="tangyan"></div>
+	<div id="t76" class="tangyan"></div>
+	<div id="t77" class="tangyan"></div>
+	<div id="t78" class="tangyan"></div>
+	<div id="t79" class="tangyan"></div>
+
+	<div id="t80" class="tangyan"></div><!--9-->
+	<div id="t81" class="tangyan"></div>
+	<div id="t82" class="tangyan"></div>
+	<div id="t83" class="tangyan"></div>
+	<div id="t84" class="tangyan"></div>
+	<div id="t85" class="tangyan"></div>
+	<div id="t86" class="tangyan"></div>
+	<div id="t87" class="tangyan"></div>
+	<div id="t88" class="tangyan"></div>
+	<div id="t89" class="tangyan"></div>
+
+	<div id="t90" class="tangyan"></div><!--10-->
+	<div id="t91" class="tangyan"></div>
+	<div id="t92" class="tangyan"></div>
+	<div id="t93" class="tangyan"></div>
+	<div id="t94" class="tangyan"></div>
+	<div id="t95" class="tangyan"></div>
+	<div id="t96" class="tangyan"></div>
+	<div id="t97" class="tangyan"></div>
+	<div id="t98" class="tangyan"></div>
+	<div id="t99" class="tangyan"></div>
+
+<!--表层格-->
+	<div id="y00" class="yangmi"></div> <!--1-->
+	<div id="y01" class="yangmi"></div>
+	<div id="y02" class="yangmi"></div>
+	<div id="y03" class="yangmi"></div>
+	<div id="y04" class="yangmi"></div>
+	<div id="y05" class="yangmi"></div>
+	<div id="y06" class="yangmi"></div>
+	<div id="y07" class="yangmi"></div>
+	<div id="y08" class="yangmi"></div>
+	<div id="y09" class="yangmi"></div>
+
+	<div id="y10" class="yangmi"></div> <!--2-->
+	<div id="y11" class="yangmi"></div>
+	<div id="y12" class="yangmi"></div>
+	<div id="y13" class="yangmi"></div>
+	<div id="y14" class="yangmi"></div>
+	<div id="y15" class="yangmi"></div>
+	<div id="y16" class="yangmi"></div>
+	<div id="y17" class="yangmi"></div>
+	<div id="y18" class="yangmi"></div>
+	<div id="y19" class="yangmi"></div>
+
+	<div id="y20" class="yangmi"></div> <!--3-->
+	<div id="y21" class="yangmi"></div>
+	<div id="y22" class="yangmi"></div>
+	<div id="y23" class="yangmi"></div>
+	<div id="y24" class="yangmi"></div>
+	<div id="y25" class="yangmi"></div>
+	<div id="y26" class="yangmi"></div>
+	<div id="y27" class="yangmi"></div>
+	<div id="y28" class="yangmi"></div>
+	<div id="y29" class="yangmi"></div>
+
+	<div id="y30" class="yangmi"></div> <!--4-->
+	<div id="y31" class="yangmi"></div>
+	<div id="y32" class="yangmi"></div>
+	<div id="y33" class="yangmi"></div>
+	<div id="y34" class="yangmi"></div>
+	<div id="y35" class="yangmi"></div>
+	<div id="y36" class="yangmi"></div>
+	<div id="y37" class="yangmi"></div>
+	<div id="y38" class="yangmi"></div>
+	<div id="y39" class="yangmi"></div>
+
+	<div id="y40" class="yangmi"></div> <!--5-->
+	<div id="y41" class="yangmi"></div>
+	<div id="y42" class="yangmi"></div>
+	<div id="y43" class="yangmi"></div>
+	<div id="y44" class="yangmi"></div>
+	<div id="y45" class="yangmi"></div>
+	<div id="y46" class="yangmi"></div>
+	<div id="y47" class="yangmi"></div>
+	<div id="y48" class="yangmi"></div>
+	<div id="y49" class="yangmi"></div>
+	
+	<div id="y50" class="yangmi"></div> <!--6-->
+	<div id="y51" class="yangmi"></div>
+	<div id="y52" class="yangmi"></div>
+	<div id="y53" class="yangmi"></div>
+	<div id="y54" class="yangmi"></div>
+	<div id="y55" class="yangmi"></div>
+	<div id="y56" class="yangmi"></div>
+	<div id="y57" class="yangmi"></div>
+	<div id="y58" class="yangmi"></div>
+	<div id="y59" class="yangmi"></div>
+
+	<div id="y60" class="yangmi"></div> <!--7-->
+	<div id="y61" class="yangmi"></div>
+	<div id="y62" class="yangmi"></div>
+	<div id="y63" class="yangmi"></div>
+	<div id="y64" class="yangmi"></div>
+	<div id="y65" class="yangmi"></div>
+	<div id="y66" class="yangmi"></div>
+	<div id="y67" class="yangmi"></div>
+	<div id="y68" class="yangmi"></div>
+	<div id="y69" class="yangmi"></div>
+
+	<div id="y70" class="yangmi"></div> <!--8-->
+	<div id="y71" class="yangmi"></div>
+	<div id="y72" class="yangmi"></div>
+	<div id="y73" class="yangmi"></div>
+	<div id="y74" class="yangmi"></div>
+	<div id="y75" class="yangmi"></div>
+	<div id="y76" class="yangmi"></div>
+	<div id="y77" class="yangmi"></div>
+	<div id="y78" class="yangmi"></div>
+	<div id="y79" class="yangmi"></div>
+
+	<div id="y80" class="yangmi"></div> <!--9-->
+	<div id="y81" class="yangmi"></div>
+	<div id="y82" class="yangmi"></div>
+	<div id="y83" class="yangmi"></div>
+	<div id="y84" class="yangmi"></div>
+	<div id="y85" class="yangmi"></div>
+	<div id="y86" class="yangmi"></div>
+	<div id="y87" class="yangmi"></div>
+	<div id="y88" class="yangmi"></div>
+	<div id="y89" class="yangmi"></div>
+
+	<div id="y90" class="yangmi"></div> <!--10-->
+	<div id="y91" class="yangmi"></div>
+	<div id="y92" class="yangmi"></div>
+	<div id="y93" class="yangmi"></div>
+	<div id="y94" class="yangmi"></div>
+	<div id="y95" class="yangmi"></div>
+	<div id="y96" class="yangmi"></div>
+	<div id="y97" class="yangmi"></div>
+	<div id="y98" class="yangmi"></div>
+	<div id="y99" class="yangmi"></div>
+	<div id="gameover">
+		<h2>GAME OVER!</h2>
+		<a href="mimi.html">restart</a>
+    </div>
+  </div>
+ </body>
+ <script>
+	var $tang=$('<img src="images/t.jpg"/>');//唐
+	var $yang=$('<img src="images/y.jpg"/>');//杨
+	var $mine=$('<img src="images/mine.jpg"/>');//地雷
+	var $mine1="images/mine.jpg";//地雷src
+	var $t="images/t.jpg";//唐的src
+	var $one="images/1.jpg";//数字1
+	var $two="images/2.jpg";//数字2
+	var $three="images/3.jpg";//数字3
+	var $four="images/4.jpg";//数字3
+	$(".yangmi").html($yang);//表层格刷满y
+	var timer=null;//计时器
+	var s=0;
+	var m=0;
+	//计时器函数
+	timer=setInterval(function(){	
+		s+=1;
+		if(s==60){
+			m+=1;
+			s=0;
+		}
+		$("time").text(m+"min"+s+"s");
+	},1000);
+	//生成地雷方法
+	function mine(){
+		$(".tangyan").html($tang);//先把底层刷满唐
+		for(var i=0,arrr=[],arrc=[],arrrc=[],$boo=null;i<4;i++){
+			var r=Math.floor(Math.random()*10);//地雷的坐标（r,c）
+			var c=Math.floor(Math.random()*10);
+			$("#t"+r+c+">img").attr("src",$mine1);
+			if(!$boo){
+				//为地雷旁边区域设置相应的数字
+				if(r!=0&&r!=9&&c!=0&&c!=9){
+					console.log($("#t"+r+(c-1)+">img").attr("src"));
+					console.log(r+":"+c);
+					console.log($("#t"+r+(c-1)+">img").attr("src"),"aaaaaaaaaaaaaaaaaaaaaaaa");
+					$("#t"+r+(c-1)+">img").attr("src",
+						$("#t"+r+(c-1)+">img").attr("src")==$t?$one:
+						$("#t"+r+(c-1)+">img").attr("src")==$one?$two:
+						$("#t"+r+(c-1)+">img").attr("src")==$two?$three:
+						$("#t"+r+(c-1)+">img").attr("src")==$three?$four:
+						$mine1	
+					);
+					$("#t"+r+(c+1)+">img").attr("src",
+						$("#t"+r+(c+1)+">img").attr("src")==$t?$one:
+					    $("#t"+r+(c+1)+">img").attr("src")==$one?$two:
+						$("#t"+r+(c+1)+">img").attr("src")==$two?$three:
+						$("#t"+r+(c+1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r-1)+c+">img").attr("src",
+						$("#t"+(r-1)+c+">img").attr("src")==$t?$one:
+						$("#t"+(r-1)+c+">img").attr("src")==$one?$two:
+						$("#t"+(r-1)+c+">img").attr("src")==$two?$three:
+						$("#t"+(r-1)+c+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r+1)+c+">img").attr("src",
+						$("#t"+(r+1)+c+">img").attr("src")==$t?$one:
+					    $("#t"+(r+1)+c+">img").attr("src")==$one?$two:
+						$("#t"+(r+1)+c+">img").attr("src")==$two?$three:
+						$("#t"+(r+1)+c+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r-1)+(c-1)+">img").attr("src",
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$t?$one:
+					    $("#t"+(r-1)+(c-1)+">img").attr("src")==$one?$two:
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$two?$three:
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r-1)+(c+1)+">img").attr("src",
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$t?$one:
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$one?$two:
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$two?$three:
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r+1)+(c-1)+">img").attr("src",
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$t?$one:
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$one?$two:
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$two?$three:
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r+1)+(c+1)+">img").attr("src",
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$t?$one:
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$one?$two:
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$two?$three:
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+				}
+				else if(r==0&&c!=0&&c!=9){
+					$("#t"+r+(c-1)+">img").attr("src",
+						$("#t"+r+(c-1)+">img").attr("src")==$t?$one:
+						$("#t"+r+(c-1)+">img").attr("src")==$one?$two:
+						$("#t"+r+(c-1)+">img").attr("src")==$two?$three:
+						$("#t"+r+(c-1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+r+(c+1)+">img").attr("src",
+						$("#t"+r+(c+1)+">img").attr("src")==$t?$one:
+						$("#t"+r+(c+1)+">img").attr("src")==$one?$two:
+						$("#t"+r+(c+1)+">img").attr("src")==$two?$three:
+						$("#t"+r+(c+1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r+1)+c+">img").attr("src",
+						$("#t"+(r+1)+c+">img").attr("src")==$t?$one:
+						$("#t"+(r+1)+c+">img").attr("src")==$one?$two:
+						$("#t"+(r+1)+c+">img").attr("src")==$two?$three:
+						$("#t"+(r+1)+c+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r+1)+(c-1)+">img").attr("src",
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$t?$one:
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$one?$two:
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$two?$three:
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r+1)+(c+1)+">img").attr("src",
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$t?$one:
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$one?$two:
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$two?$three:
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+				}else if(r==0&&c==0){
+					$("#t"+(r+1)+c+">img").attr("src",
+						$("#t"+(r+1)+c+">img").attr("src")==$t?$one:
+						$("#t"+(r+1)+c+">img").attr("src")==$one?$two:
+						$("#t"+(r+1)+c+">img").attr("src")==$two?$three:
+						$("#t"+(r+1)+c+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r+1)+(c+1)+">img").attr("src",
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$t?$one:
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$one?$two:
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$two?$three:
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+r+(c+1)+">img").attr("src",
+						$("#t"+r+(c+1)+">img").attr("src")==$t?$one:
+						$("#t"+r+(c+1)+">img").attr("src")==$one?$two:
+						$("#t"+r+(c+1)+">img").attr("src")==$two?$three:
+						$("#t"+r+(c+1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+				}else if(r==0&&c==9){
+					$("#t"+r+(c-1)+">img").attr("src",
+						$("#t"+r+(c-1)+">img").attr("src")==$t?$one:
+						$("#t"+r+(c-1)+">img").attr("src")==$one?$two:
+						$("#t"+r+(c-1)+">img").attr("src")==$two?$three:
+						$("#t"+r+(c-1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r+1)+(c-1)+">img").attr("src",
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$t?$one:
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$one?$two:
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$two?$three:
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r+1)+c+">img").attr("src",
+						$("#t"+(r+1)+c+">img").attr("src")==$t?$one:
+						$("#t"+(r+1)+c+">img").attr("src")==$one?$two:
+						$("#t"+(r+1)+c+">img").attr("src")==$two?$three:
+						$("#t"+(r+1)+c+">img").attr("src")==$three?$four:
+						$mine1
+					);
+				}else if(r==9&&c!=0&&c!=9){
+					$("#t"+r+(c-1)+">img").attr("src",
+						$("#t"+r+(c-1)+">img").attr("src")==$t?$one:
+						$("#t"+r+(c-1)+">img").attr("src")==$one?$two:
+						$("#t"+r+(c-1)+">img").attr("src")==$two?$three:
+						$("#t"+r+(c-1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+r+(c+1)+">img").attr("src",
+						$("#t"+r+(c+1)+">img").attr("src")==$t?$one:
+						$("#t"+r+(c+1)+">img").attr("src")==$one?$two:
+						$("#t"+r+(c+1)+">img").attr("src")==$two?$three:
+						$("#t"+r+(c+1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r-1)+c+">img").attr("src",
+						$("#t"+(r-1)+c+">img").attr("src")==$t?$one:
+						$("#t"+(r-1)+c+">img").attr("src")==$one?$two:
+						$("#t"+(r-1)+c+">img").attr("src")==$two?$three:
+						$("#t"+(r-1)+c+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r-1)+(c-1)+">img").attr("src",
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$t?$one:
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$one?$two:
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$two?$three:
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r-1)+(c+1)+">img").attr("src",
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$t?$one:
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$one?$two:
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$two?$three:
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+				}else if(r==9&&c==0){
+					$("#t"+(r-1)+c+">img").attr("src",
+						$("#t"+(r-1)+c+">img").attr("src")==$t?$one:
+						$("#t"+(r-1)+c+">img").attr("src")==$one?$two:
+						$("#t"+(r-1)+c+">img").attr("src")==$two?$three:
+						$("#t"+(r-1)+c+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r-1)+(c+1)+">img").attr("src",
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$t?$one:
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$one?$two:
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$two?$three:
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+r+(c+1)+">img").attr("src",
+						$("#t"+r+(c+1)+">img").attr("src")==$t?$one:
+						$("#t"+r+(c+1)+">img").attr("src")==$one?$two:
+						$("#t"+r+(c+1)+">img").attr("src")==$two?$three:
+						$("#t"+r+(c+1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+				}else if(r==9&&c==9){
+					$("#t"+(r-1)+c+">img").attr("src",
+						$("#t"+(r-1)+c+">img").attr("src")==$t?$one:
+						$("#t"+(r-1)+c+">img").attr("src")==$one?$two:
+						$("#t"+(r-1)+c+">img").attr("src")==$two?$three:
+						$("#t"+(r-1)+c+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r-1)+(c-1)+">img").attr("src",
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$t?$one:
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$one?$two:
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$two?$three:
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+r+(c-1)+">img").attr("src",
+						$("#t"+r+(c-1)+">img").attr("src")==$t?$one:
+						$("#t"+r+(c-1)+">img").attr("src")==$one?$two:
+						$("#t"+r+(c-1)+">img").attr("src")==$two?$three:
+						$("#t"+r+(c-1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+				}else if(c==0&&r!=0&&r!=9){
+					$("#t"+(r-1)+c+">img").attr("src",
+						$("#t"+(r-1)+c+">img").attr("src")==$t?$one:
+						$("#t"+(r-1)+c+">img").attr("src")==$one?$two:
+						$("#t"+(r-1)+c+">img").attr("src")==$two?$three:
+						$("#t"+(r-1)+c+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r+1)+c+">img").attr("src",
+						$("#t"+(r+1)+c+">img").attr("src")==$t?$one:
+						$("#t"+(r+1)+c+">img").attr("src")==$one?$two:
+						$("#t"+(r+1)+c+">img").attr("src")==$two?$three:
+						$("#t"+(r+1)+c+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+r+(c+1)+">img").attr("src",
+						$("#t"+r+(c+1)+">img").attr("src")==$t?$one:
+						$("#t"+r+(c+1)+">img").attr("src")==$one?$two:
+						$("#t"+r+(c+1)+">img").attr("src")==$two?$three:
+						$("#t"+r+(c+1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r-1)+(c+1)+">img").attr("src",
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$t?$one:
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$one?$two:
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$two?$three:
+						$("#t"+(r-1)+(c+1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r+1)+(c+1)+">img").attr("src",
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$t?$one:
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$one?$two:
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$two?$three:
+						$("#t"+(r+1)+(c+1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+				}else if(c==9&&r!=0&&r!=9){
+					$("#t"+(r-1)+c+">img").attr("src",
+						$("#t"+(r-1)+c+">img").attr("src")==$t?$one:
+						$("#t"+(r-1)+c+">img").attr("src")==$one?$two:
+						$("#t"+(r-1)+c+">img").attr("src")==$two?$three:
+						$("#t"+(r-1)+c+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r+1)+c+">img").attr("src",
+						$("#t"+(r+1)+c+">img").attr("src")==$t?$one:
+						$("#t"+(r+1)+c+">img").attr("src")==$one?$two:
+						$("#t"+(r+1)+c+">img").attr("src")==$two?$three:
+						$("#t"+(r+1)+c+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+r+(c-1)+">img").attr("src",
+						$("#t"+r+(c-1)+">img").attr("src")==$t?$one:
+						$("#t"+r+(c-1)+">img").attr("src")==$one?$two:
+						$("#t"+r+(c-1)+">img").attr("src")==$two?$three:
+						$("#t"+r+(c-1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r-1)+(c-1)+">img").attr("src",
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$t?$one:
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$one?$two:
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$two?$three:
+						$("#t"+(r-1)+(c-1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+					$("#t"+(r+1)+(c-1)+">img").attr("src",
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$t?$one:
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$one?$two:
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$two?$three:
+						$("#t"+(r+1)+(c-1)+">img").attr("src")==$three?$four:
+						$mine1
+					);
+				}			
+			}else{
+				mine();
+			}
+			arrr.push(r);
+			console.log("arrr"+arrr);
+			arrc.push(c);
+			console.log("arrc"+arrc);
+			arrrc.push(""+arrr[i]+arrc[i]);
+			console.log("arrrc"+arrrc);
+			//判断r,c两个数组组成的新数组是否有重复元素
+			$boo=isRepeat();
+			function isRepeat(arrrc){ 
+				var hash = {}; 
+				for(var k in arrrc) { 
+					if(hash[arrrc[k]]){ 
+						return true; 
+						hash[arrrc[k]] = true;
+					}
+				} 
+				return false; 
+			} 
+		}//生成地雷的for循环结尾
+		for(var k=0;k<4;k++){
+			$("#y"+arrr[k]+arrc[k]).click(function(){
+				$(this).slideUp(1000);
+				$("#gameover").slideDown(2000);			
+				clearTimeout(timer);
+				timer=null;
+			});
+		}
+	}
+	mine();
+	$(".yangmi").click(function(){//表层格绑定click事件
+		$(this).slideUp(500);
+	});
+	$(".tangyan").click(function(){//底层格绑定click事件
+		console.log("this is tang");
+	});
+</script>
+</html>
